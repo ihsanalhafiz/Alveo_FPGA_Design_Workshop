@@ -60,9 +60,7 @@ LDFLAGS += -L$(XILINX_XRT)/lib -pthread -lOpenCL
 PLATFORM_BLOCKLIST += nodma 
 ############################## Setting up Host Variables ##############################
 #Include Required Host Source Files
-CXXFLAGS += -I$(XF_PROJ_ROOT)/common/includes/cmdparser
-CXXFLAGS += -I$(XF_PROJ_ROOT)/common/includes/logger
-HOST_SRCS += $(XF_PROJ_ROOT)/common/includes/cmdparser/cmdlineparser.cpp $(XF_PROJ_ROOT)/common/includes/logger/logger.cpp ./src/host.cpp 
+HOST_SRCS += ./host/streamhls_host.cpp 
 # Host compiler global settings
 CXXFLAGS += -fmessage-length=0
 CXXFLAGS += $(GXX_EXTRA_FLAGS)
@@ -74,8 +72,8 @@ LDFLAGS += -luuid -lxrt_coreutil
 VPP_FLAGS += --save-temps --kernel_frequency 200
 
 # Kernel linker flags
-VPP_LDFLAGS_krnl_vadd += --config ./streamhls.cfg
-EXECUTABLE = ./streamhls
+VPP_LDFLAGS_krnl_vadd += --config ./src/streamhls.cfg
+EXECUTABLE = ./streamhls_host
 EMCONFIG_DIR = $(TEMP_DIR)
 
 ############################## Setting Targets ##############################
@@ -92,7 +90,7 @@ build: check-vitis check-device $(BUILD_DIR)/streamhls.xclbin
 xclbin: build
 
 ############################## Setting Rules for Binary Containers (Building Kernels) ##############################
-$(TEMP_DIR)/streamhls.xo: ./streamhls.cpp
+$(TEMP_DIR)/streamhls.xo: ./src/streamhls.cpp
 	mkdir -p $(TEMP_DIR)
 	v++ -c $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) -k streamhls --temp_dir $(TEMP_DIR)  -I'$(<D)' -o'$@' '$<'
 

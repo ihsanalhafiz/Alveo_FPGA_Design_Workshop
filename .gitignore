@@ -1,2 +1,11 @@
 /tmp
 vitis_hls.log
+device_trace_0.csv
+device_trace_1.csv
+native_trace.csv
+power_profile_xilinx_u55c_gen3x16_xdma_base_3-0.csv
+streamhls_host
+summary.csv
+v++_streamhls.log
+xcd.log
+xrt.run_summary
