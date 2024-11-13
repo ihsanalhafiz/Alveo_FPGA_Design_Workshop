@@ -1,0 +1,44 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 3 2",
+    "file": "streamhls.cpp",
+    "fileloc": 54,
+    "instructions": 16,
+    "name": "streamhls",
+    "total_instructions": 216
+  },
+  "1": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "streamhls.cpp",
+    "fileloc": 15,
+    "instructions": 71,
+    "loads": {
+      "L": 16
+    },
+    "name": "fetch_from_hbm",
+    "total_instructions": 71
+  },
+  "2": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "streamhls.cpp",
+    "fileloc": 43,
+    "instructions": 71,
+    "name": "write_to_output",
+    "stores": {
+      "L": 16
+    },
+    "total_instructions": 71
+  },
+  "3": {
+    "basicblocks": 3,
+    "calls": "",
+    "file": "streamhls.cpp",
+    "fileloc": 27,
+    "instructions": 58,
+    "name": "process_kernel",
+    "total_instructions": 58
+  }
+}

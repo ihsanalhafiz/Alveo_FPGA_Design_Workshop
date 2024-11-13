@@ -1,0 +1,793 @@
+--- !Passed
+Pass:            inline
+Name:            AlwaysInline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 12, Column: 35 }
+Function:        _ZN7float16C2Ev
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'hls::vector<float, 16ul>::vector(float const&)'
+    DebugLoc:        { File: /opt/xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h, 
+                       Line: 125, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float16::float16()'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Missed
+Pass:            reflow-reg2mem-ssa
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-reg2mem-ssa
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-reg2mem-ssa
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-reg2mem-ssa
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-reg2mem-ssa
+Name:            UnsupportedAggrPragmaOnField
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+Function:        _ZN7float16C2Ev
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 54, Column: 0 }
+Function:        _Z9streamhlsPfS_
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            hbm_data
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 54, Column: 0 }
+Function:        _Z9streamhlsPfS_
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            output_data
+  - String:          ''' for cosimulation.'
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Missed
+Pass:            reflow-disaggr
+Name:            UnsupportedAggrPragmaOnField
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          Cannot apply aggregate pragma on an individual member field of struct unless the whole struct is being disaggregated.
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 47, Column: 26 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 34, Column: 26 }
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_34_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 19, Column: 26 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_19_2
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: /opt/xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h, 
+                   Line: 127, Column: 23 }
+Function:        _ZN7float16C2Ev
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_127_1
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_47_2
+  - String:          ''' ('
+  - LoopLoc:         './src/streamhls.cpp:47:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          write_to_output
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 27, Column: 0 }
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_34_2
+  - String:          ''' ('
+  - LoopLoc:         './src/streamhls.cpp:34:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          process_kernel
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_19_2
+  - String:          ''' ('
+  - LoopLoc:         './src/streamhls.cpp:19:26'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          fetch_from_hbm
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-pragma-loop-unroll
+Name:            PragmaFullyUnroll
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+Function:        _ZN7float16C2Ev
+Args:            
+  - String:          'Unrolling loop '''
+  - LoopName:        VITIS_LOOP_127_1
+  - String:          ''' ('
+  - LoopLoc:         '/opt/xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h:127:23'
+  - String:          ') '
+  - String:          'in function '''
+  - String:          'float16::float16'
+  - String:          ''' completely with a factor of '
+  - Factor:          '16'
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: '/opt/xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                   Line: 186, Column: 0 }
+Function:        _ZNSt5arrayIfLm16EEixEm
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::__array_traits<float, 16ul>::_S_ref(float const (&) [16], unsigned long)'
+    DebugLoc:        { File: '/opt/xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 56, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'std::array<float, 16ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+Function:        _ZN7float16C2Ev
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<float, 16ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'float16::float16()'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<float, 16ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fetch_from_hbm(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float16::float16()'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'fetch_from_hbm(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 27, Column: 0 }
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<float, 16ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_kernel(hls::stream<float16, 0>&, hls::stream<float16, 0>&, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 27, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 27, Column: 0 }
+Function:        _Z14process_kernelRN3hls6streamI7float16Li0EEES3_i
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float16::float16()'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'process_kernel(hls::stream<float16, 0>&, hls::stream<float16, 0>&, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 27, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'std::array<float, 16ul>::operator[](unsigned long)'
+    DebugLoc:        { File: '/opt/xilinx/Vitis_HLS/2023.2/tps/lnx64/gcc-8.3.0/lib/gcc/x86_64-pc-linux-gnu/8.3.0/../../../../include/c++/8.3.0/array', 
+                       Line: 186, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write_to_output(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-inliner
+Name:            Inline
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Inlining function '''
+  - Callee:          'float16::float16()'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 10, Column: 0 }
+  - String:          ''' into '''
+  - Caller:          'write_to_output(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+  - String:          ''''
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 59, Column: 26 }
+Function:        _Z9streamhlsPfS_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            output_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-aggr
+Name:            AggrSucc
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 58, Column: 23 }
+Function:        _Z9streamhlsPfS_
+Args:            
+  - String:          'Aggregating '
+  - HwTyName:        'fifo (hls::stream)'
+  - String:          ' variable '''
+  - Name:            input_stream
+  - String:          ''' with '
+  - AggregateTypeName: 'compact=bit'
+  - String:          ' mode in '
+  - Bitwidth:        '512'
+  - String:          '-bits'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 16, Column: 22 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        hbm_dataseq
+  - ArrayName:       hbm_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:16:22'
+  - String:          ' '
+  - Function:        'fetch_from_hbm(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.34
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.37
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.40
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.43
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.46
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.49
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.52
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.55
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.58
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.61
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.64
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.67
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.70
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.73
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.76
+  - OrigAccess:      load
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 21, Column: 17 }
+  - OrigDirection:   read
+  - OrigID:          VITIS_LOOP_19_2.load.79
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 44, Column: 22 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of length '
+  - Length:          '256'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        output_dataseq
+  - ArrayName:       output_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_44_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:44:22'
+  - String:          ' '
+  - Function:        'write_to_output(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.36
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.39
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.42
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.45
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.48
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.51
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.54
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.57
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.60
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.63
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.66
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.69
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.72
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.75
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.78
+  - OrigAccess:      store
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 49, Column: 21 }
+  - OrigDirection:   write
+  - OrigID:          VITIS_LOOP_47_2.store.81
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 16, Column: 22 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - OrigLength:      '256'
+  - String:          ' x '
+  - OrigWords:       '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '16'
+  - String:          ': '
+  - Length:          '16'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 16, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          hbm_dataseq
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - ArrayName:       hbm_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:16:22'
+  - String:          ' '
+  - Function:        'fetch_from_hbm(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 16, Column: 22 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '512'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 16, Column: 22 }
+  - OrigDirection:   read
+  - OrigID:          wseq
+  - ArrayName:       hbm_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:16:22'
+  - String:          ' '
+  - Function:        'fetch_from_hbm(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-widen
+Name:            BurstWidened
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 44, Column: 22 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - OrigLength:      '256'
+  - String:          ' x '
+  - OrigWords:       '32'
+  - String:          'bit words has been widened by '
+  - Factor:          '16'
+  - String:          ': '
+  - Length:          '16'
+  - String:          ' x '
+  - Words:           '512'
+  - String:          bit words
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 44, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          output_dataseq
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        wseq
+  - ArrayName:       output_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_44_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:44:22'
+  - String:          ' '
+  - Function:        'write_to_output(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualThreshold
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 44, Column: 22 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i512
+  - String:          ' size is greater than or equal to the max_widen_bitwidth threshold of '
+  - Threshold:       '512'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 44, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          wseq
+  - ArrayName:       output_data
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_44_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:44:22'
+  - String:          ' '
+  - Function:        'write_to_output(hls::stream<float16, 0>&, float*, int)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 16, Column: 22 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:16:22'
+  - String:          ' '
+  - Function:        'fetch_from_hbm(hls::stream<float16, 0>&, float*, int) (.1)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 15, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 16, Column: 22 }
+Function:        _Z14fetch_from_hbmRN3hls6streamI7float16Li0EEEPfi.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       reads
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_16_1
+  - String:          '''('
+  - LoopLoc:         './src/streamhls.cpp:16:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 44, Column: 22 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_44_1
+  - String:          ' '
+  - LoopLoc:         './src/streamhls.cpp:44:22'
+  - String:          ' '
+  - Function:        'write_to_output(hls::stream<float16, 0>&, float*, int) (.1)'
+    DebugLoc:        { File: ./src/streamhls.cpp, Line: 43, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: ./src/streamhls.cpp, Line: 44, Column: 22 }
+Function:        _Z15write_to_outputRN3hls6streamI7float16Li0EEEPfi.1
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of length '
+  - Length:          '16'
+  - String:          ' and bit width '
+  - Width:           '512'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_44_1
+  - String:          '''('
+  - LoopLoc:         './src/streamhls.cpp:44:22'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...

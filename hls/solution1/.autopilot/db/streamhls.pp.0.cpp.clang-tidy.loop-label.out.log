@@ -1,0 +1,893 @@
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:9056:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:9056:7: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:10030:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:10030:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:10044:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:10044:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:10058:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:10058:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:11675:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:11675:7: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15811:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                       ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15812:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                       ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15813:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                       ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15814:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K3 type=ROM_1P impl=LUTRAM
+                                                                       ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15815:72: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_cos_K4 type=ROM_1P impl=LUTRAM
+                                                                       ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15845:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15846:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15847:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15848:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15849:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::cos_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15850:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15851:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15852:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15853:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K3 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15854:68: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=fourth_order_double::sin_K4 type=ROM_1P impl=LUTRAM
+                                                                   ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15904:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                      ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15905:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                      ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15906:71: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_cos_K2 type=ROM_1P impl=LUTRAM
+                                                                      ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15933:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15934:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15935:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::cos_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15936:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K0 type=ROM_1P impl=LUTRAM
+                                                                  ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15937:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K1 type=ROM_1P impl=LUTRAM
+                                                                  ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15938:67: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=second_order_float::sin_K2 type=ROM_1P impl=LUTRAM
+                                                                  ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15974:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K0 type=ROM_1P impl=LUTRAM
+                                                                        ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:15975:73: error: Invalid Directive: for current device, ROM_1P + LUTRAM is invalid combination for BIND_STORAGE's option 'type + impl' [clang-diagnostic-error]
+#pragma HLS BIND_STORAGE variable=first_order_fixed_16::sin_cos_K1 type=ROM_1P impl=LUTRAM
+                                                                        ^
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16249:5: warning: Added loop label VITIS_LOOP_61_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_61_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16249:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16295:5: warning: Added loop label VITIS_LOOP_117_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_117_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16295:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16458:9: warning: Added loop label VITIS_LOOP_289_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_289_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16458:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16610:9: warning: Added loop label VITIS_LOOP_449_1:   [xilinx-label-all-loops]
+        for(int i=0;i<W-1;i++){
+        ^~~
+        VITIS_LOOP_449_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16610:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16790:5: warning: Added loop label VITIS_LOOP_629_1:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_629_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16790:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16794:5: warning: Added loop label VITIS_LOOP_633_2:   [xilinx-label-all-loops]
+    for(int i=0;i<W+1;i++){
+    ^~~
+    VITIS_LOOP_633_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16794:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16904:5: warning: Added loop label VITIS_LOOP_743_1:   [xilinx-label-all-loops]
+    for (int n=0; n<Nmax; n++){
+    ^~~
+    VITIS_LOOP_743_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16904:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16994:7: warning: Added loop label VITIS_LOOP_840_1:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_840_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:16994:7: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17013:7: warning: Added loop label VITIS_LOOP_859_2:   [xilinx-label-all-loops]
+      for(int i=0;i<W-1;i++){
+      ^~~
+      VITIS_LOOP_859_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17013:7: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17303:5: warning: Added loop label VITIS_LOOP_1173_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1173_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17303:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17386:5: warning: Added loop label VITIS_LOOP_1256_1:   [xilinx-label-all-loops]
+    for(int i=0; i<Nmax; i++) {
+    ^~~
+    VITIS_LOOP_1256_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17386:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17792:13: warning: Added loop label VITIS_LOOP_68_1:   [xilinx-label-all-loops]
+            for (int j = 3; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_68_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17792:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17798:17: warning: Added loop label VITIS_LOOP_74_2:   [xilinx-label-all-loops]
+                for (int j = 3; j >= I_+1; j--){
+                ^~~
+                VITIS_LOOP_74_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17798:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17802:17: warning: Added loop label VITIS_LOOP_78_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_78_3: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17802:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17850:13: warning: Added loop label VITIS_LOOP_145_4:   [xilinx-label-all-loops]
+            for (int j = 9; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_145_4: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17850:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17856:17: warning: Added loop label VITIS_LOOP_151_5:   [xilinx-label-all-loops]
+                for (int j = 9; j >= I_+4; j--){
+                ^~~
+                VITIS_LOOP_151_5: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17856:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17860:17: warning: Added loop label VITIS_LOOP_155_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--){
+                ^~~
+                VITIS_LOOP_155_6: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17860:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17875:9: warning: Added loop label VITIS_LOOP_170_7:   [xilinx-label-all-loops]
+        for (int j = 14; j < 22; j++){
+        ^~~
+        VITIS_LOOP_170_7: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17875:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17883:17: warning: Added loop label VITIS_LOOP_178_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++){
+                ^~~
+                VITIS_LOOP_178_8: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17883:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17948:13: warning: Added loop label VITIS_LOOP_243_9:   [xilinx-label-all-loops]
+            for (int j = 21; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_243_9: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17948:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17954:17: warning: Added loop label VITIS_LOOP_249_10:   [xilinx-label-all-loops]
+                for (int j = 21; j >= I_+10; j--) {
+                ^~~
+                VITIS_LOOP_249_10: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17954:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17958:17: warning: Added loop label VITIS_LOOP_253_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_253_11: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17958:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17973:9: warning: Added loop label VITIS_LOOP_268_12:   [xilinx-label-all-loops]
+        for (int j = 27; j < 46; j++){
+        ^~~
+        VITIS_LOOP_268_12: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17973:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17981:17: warning: Added loop label VITIS_LOOP_276_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_276_13: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:17981:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18210:13: warning: Added loop label VITIS_LOOP_505_14:   [xilinx-label-all-loops]
+            for (int j = 45; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_505_14: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18210:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18216:17: warning: Added loop label VITIS_LOOP_511_15:   [xilinx-label-all-loops]
+                for (int j = 45; j >= I_+22; j--){
+                ^~~
+                VITIS_LOOP_511_15: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18216:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18220:17: warning: Added loop label VITIS_LOOP_515_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_515_16: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18220:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18230:9: warning: Added loop label VITIS_LOOP_525_17:   [xilinx-label-all-loops]
+        for (int j = 32-F_; j < 32+I_; j++){
+        ^~~
+        VITIS_LOOP_525_17: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18230:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18234:9: warning: Added loop label VITIS_LOOP_529_18:   [xilinx-label-all-loops]
+        for (int j = 32+I_; j <= 64; j++){
+        ^~~
+        VITIS_LOOP_529_18: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18234:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18244:9: warning: Added loop label VITIS_LOOP_539_19:   [xilinx-label-all-loops]
+        for (int j = 37; j < 64; j++) {
+        ^~~
+        VITIS_LOOP_539_19: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18244:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18252:17: warning: Added loop label VITIS_LOOP_547_20:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++){
+                ^~~
+                VITIS_LOOP_547_20: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18252:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18613:13: warning: Added loop label VITIS_LOOP_908_21:   [xilinx-label-all-loops]
+            for (int j = 63; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_908_21: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18613:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18619:17: warning: Added loop label VITIS_LOOP_914_22:   [xilinx-label-all-loops]
+                for (int j = 63; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_914_22: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18619:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18623:17: warning: Added loop label VITIS_LOOP_918_23:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_918_23: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18623:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18739:13: warning: Added loop label VITIS_LOOP_1034_1:   [xilinx-label-all-loops]
+            for (int j = 4; j >= I_+1; j--) {
+            ^~~
+            VITIS_LOOP_1034_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18739:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18745:17: warning: Added loop label VITIS_LOOP_1040_2:   [xilinx-label-all-loops]
+                for (int j = 4; j >= I_+1; j--) {
+                ^~~
+                VITIS_LOOP_1040_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18745:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18749:17: warning: Added loop label VITIS_LOOP_1044_3:   [xilinx-label-all-loops]
+                for (int j = I_; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1044_3: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18749:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18836:13: warning: Added loop label VITIS_LOOP_1131_4:   [xilinx-label-all-loops]
+            for (int j = 10; j >= I_+4; j--) {
+            ^~~
+            VITIS_LOOP_1131_4: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18836:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18842:17: warning: Added loop label VITIS_LOOP_1137_5:   [xilinx-label-all-loops]
+                for (int j = 10; j >= I_+4; j--) {
+                ^~~
+                VITIS_LOOP_1137_5: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18842:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18846:17: warning: Added loop label VITIS_LOOP_1141_6:   [xilinx-label-all-loops]
+                for (int j = I_+3; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1141_6: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18846:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18865:9: warning: Added loop label VITIS_LOOP_1160_7:   [xilinx-label-all-loops]
+        for (int j = wf+3; j < w-1; j++) {
+        ^~~
+        VITIS_LOOP_1160_7: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18865:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18872:17: warning: Added loop label VITIS_LOOP_1167_8:   [xilinx-label-all-loops]
+                for (int j = 0; j < 22; j++) {
+                ^~~
+                VITIS_LOOP_1167_8: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18872:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18988:13: warning: Added loop label VITIS_LOOP_1283_9:   [xilinx-label-all-loops]
+            for (int j = 22; j >= I_+10; j--) {
+            ^~~
+            VITIS_LOOP_1283_9: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18988:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18994:17: warning: Added loop label VITIS_LOOP_1289_10:   [xilinx-label-all-loops]
+                for (int j = 22; j >= I_+10; j--){
+                ^~~
+                VITIS_LOOP_1289_10: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18994:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18998:17: warning: Added loop label VITIS_LOOP_1293_11:   [xilinx-label-all-loops]
+                for (int j = I_+9; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1293_11: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:18998:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19018:9: warning: Added loop label VITIS_LOOP_1313_12:   [xilinx-label-all-loops]
+        for (int j = wf+4; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1313_12: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19018:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19025:17: warning: Added loop label VITIS_LOOP_1320_13:   [xilinx-label-all-loops]
+                for (int j = 0; j < 46; j++) {
+                ^~~
+                VITIS_LOOP_1320_13: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19025:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19287:13: warning: Added loop label VITIS_LOOP_1582_14:   [xilinx-label-all-loops]
+            for (int j = 46; j >= I_+22; j--) {
+            ^~~
+            VITIS_LOOP_1582_14: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19287:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19293:17: warning: Added loop label VITIS_LOOP_1588_15:   [xilinx-label-all-loops]
+                for (int j = 46; j >= I_+22; j--) {
+                ^~~
+                VITIS_LOOP_1588_15: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19293:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19297:17: warning: Added loop label VITIS_LOOP_1592_16:   [xilinx-label-all-loops]
+                for (int j = I_+21; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_1592_16: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19297:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19321:9: warning: Added loop label VITIS_LOOP_1616_17:   [xilinx-label-all-loops]
+        for (int j = wf+5; j < w-1; j++){
+        ^~~
+        VITIS_LOOP_1616_17: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19321:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19328:17: warning: Added loop label VITIS_LOOP_1623_18:   [xilinx-label-all-loops]
+                for (int j = 0; j < 64; j++) {
+                ^~~
+                VITIS_LOOP_1623_18: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19328:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19758:13: warning: Added loop label VITIS_LOOP_2053_19:   [xilinx-label-all-loops]
+            for (int j = 64; j >= I_+31; j--) {
+            ^~~
+            VITIS_LOOP_2053_19: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19758:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19764:17: warning: Added loop label VITIS_LOOP_2059_20:   [xilinx-label-all-loops]
+                for (int j = 64; j >= I_+31; j--) {
+                ^~~
+                VITIS_LOOP_2059_20: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19764:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19768:17: warning: Added loop label VITIS_LOOP_2063_21:   [xilinx-label-all-loops]
+                for (int j = I_+30; j >= 0; j--) {
+                ^~~
+                VITIS_LOOP_2063_21: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19768:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19898:13: warning: Added loop label VITIS_LOOP_2193_1:   [xilinx-label-all-loops]
+            for(int j=3; j>=I+1; j--) {
+            ^~~
+            VITIS_LOOP_2193_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19898:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19905:17: warning: Added loop label VITIS_LOOP_2200_2:   [xilinx-label-all-loops]
+                for(int j=3; j>=I+1; j--) {
+                ^~~
+                VITIS_LOOP_2200_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19905:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19909:17: warning: Added loop label VITIS_LOOP_2204_3:   [xilinx-label-all-loops]
+                for(int j=I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2204_3: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19909:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19956:13: warning: Added loop label VITIS_LOOP_2251_4:   [xilinx-label-all-loops]
+            for(int j=7; j>=3+I; j--) {
+            ^~~
+            VITIS_LOOP_2251_4: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19956:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19963:17: warning: Added loop label VITIS_LOOP_2258_5:   [xilinx-label-all-loops]
+                for(int j=7; j>=3+I; j--) {
+                ^~~
+                VITIS_LOOP_2258_5: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19963:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19967:17: warning: Added loop label VITIS_LOOP_2262_6:   [xilinx-label-all-loops]
+                for(int j=I+2; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2262_6: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19967:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19985:9: warning: Added loop label VITIS_LOOP_2280_7:   [xilinx-label-all-loops]
+        for(int j=11; j<16; j++) {
+        ^~~
+        VITIS_LOOP_2280_7: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:19985:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20040:13: warning: Added loop label VITIS_LOOP_2335_8:   [xilinx-label-all-loops]
+            for(int j=15; j>=7+I; j--) {
+            ^~~
+            VITIS_LOOP_2335_8: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20040:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20047:17: warning: Added loop label VITIS_LOOP_2342_9:   [xilinx-label-all-loops]
+                for(int j=15; j>=7+I; j--) {
+                ^~~
+                VITIS_LOOP_2342_9: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20047:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20051:17: warning: Added loop label VITIS_LOOP_2346_10:   [xilinx-label-all-loops]
+                for(int j=6+I; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2346_10: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20051:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20069:9: warning: Added loop label VITIS_LOOP_2364_11:   [xilinx-label-all-loops]
+        for(int j=20; j<32; j++) {
+        ^~~
+        VITIS_LOOP_2364_11: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20069:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20158:13: warning: Added loop label VITIS_LOOP_2453_12:   [xilinx-label-all-loops]
+            for(int j=31; j>=I+15; j--) {
+            ^~~
+            VITIS_LOOP_2453_12: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20158:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20165:17: warning: Added loop label VITIS_LOOP_2460_13:   [xilinx-label-all-loops]
+                for(int j=31; j>=I+15; j--) {
+                ^~~
+                VITIS_LOOP_2460_13: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20165:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20169:17: warning: Added loop label VITIS_LOOP_2464_14:   [xilinx-label-all-loops]
+                for(int j=I+14; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2464_14: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20169:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20179:9: warning: Added loop label VITIS_LOOP_2474_15:   [xilinx-label-all-loops]
+        for(int j=32-F; j<32+I; j++) {
+        ^~~
+        VITIS_LOOP_2474_15: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20179:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20183:9: warning: Added loop label VITIS_LOOP_2478_16:   [xilinx-label-all-loops]
+        for(int j=32+I; j<=64; j++) {
+        ^~~
+        VITIS_LOOP_2478_16: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20183:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20194:9: warning: Added loop label VITIS_LOOP_2489_17:   [xilinx-label-all-loops]
+        for(int j=37; j<64; j++) {
+        ^~~
+        VITIS_LOOP_2489_17: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20194:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20202:17: warning: Added loop label VITIS_LOOP_2497_18:   [xilinx-label-all-loops]
+                for(int j=0; j<64; j++) {
+                ^~~
+                VITIS_LOOP_2497_18: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20202:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20527:13: warning: Added loop label VITIS_LOOP_2822_19:   [xilinx-label-all-loops]
+            for(int j=63; j>=I+31; j--) {
+            ^~~
+            VITIS_LOOP_2822_19: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20527:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20534:17: warning: Added loop label VITIS_LOOP_2829_20:   [xilinx-label-all-loops]
+                for(int j=63; j>=I+31; j--) {
+                ^~~
+                VITIS_LOOP_2829_20: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20534:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20538:17: warning: Added loop label VITIS_LOOP_2833_21:   [xilinx-label-all-loops]
+                for(int j=I+30; j>=0; j--) {
+                ^~~
+                VITIS_LOOP_2833_21: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20538:17: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20626:4: warning: Added loop label VITIS_LOOP_2921_1:   [xilinx-label-all-loops]
+   for(int j = 5; j>=I_+2; j--) {
+   ^~~
+   VITIS_LOOP_2921_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20626:4: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20633:5: warning: Added loop label VITIS_LOOP_2928_2:   [xilinx-label-all-loops]
+    for(int j = 5; j>=I_+2; j--) {
+    ^~~
+    VITIS_LOOP_2928_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20633:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20637:5: warning: Added loop label VITIS_LOOP_2932_3:   [xilinx-label-all-loops]
+    for(int j = I_+1; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_2932_3: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20637:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20652:3: warning: Added loop label VITIS_LOOP_2947_4:   [xilinx-label-all-loops]
+  for(int j = 11; j >=7; j--) {
+  ^~~
+  VITIS_LOOP_2947_4: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20652:3: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20684:4: warning: Added loop label VITIS_LOOP_2979_5:   [xilinx-label-all-loops]
+   for(int j = 11; j >= I_+5; j--) {
+   ^~~
+   VITIS_LOOP_2979_5: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20684:4: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20691:5: warning: Added loop label VITIS_LOOP_2986_6:   [xilinx-label-all-loops]
+    for(int j = 11; j>= I_+5; j--) {
+    ^~~
+    VITIS_LOOP_2986_6: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20691:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20695:5: warning: Added loop label VITIS_LOOP_2990_7:   [xilinx-label-all-loops]
+    for(int j = I_+4; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_2990_7: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20695:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20710:3: warning: Added loop label VITIS_LOOP_3005_8:   [xilinx-label-all-loops]
+  for(int j = 25; j>=15; j--) {
+  ^~~
+  VITIS_LOOP_3005_8: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20710:3: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20760:4: warning: Added loop label VITIS_LOOP_3055_9:   [xilinx-label-all-loops]
+   for(int j = 25; j>= I_+12; j--) {
+   ^~~
+   VITIS_LOOP_3055_9: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20760:4: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20767:5: warning: Added loop label VITIS_LOOP_3062_10:   [xilinx-label-all-loops]
+    for(int j = 25; j>=I_+12; j--) {
+    ^~~
+    VITIS_LOOP_3062_10: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20767:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20771:5: warning: Added loop label VITIS_LOOP_3066_11:   [xilinx-label-all-loops]
+    for(int j = I_+11; j>=0; j--) {
+    ^~~
+    VITIS_LOOP_3066_11: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20771:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20786:3: warning: Added loop label VITIS_LOOP_3081_12:   [xilinx-label-all-loops]
+  for(int j = 51; j >= 29; j--) {
+  ^~~
+  VITIS_LOOP_3081_12: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20786:3: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20923:4: warning: Added loop label VITIS_LOOP_3218_13:   [xilinx-label-all-loops]
+   for(int j = 51; j >= 25 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3218_13: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20923:4: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20930:5: warning: Added loop label VITIS_LOOP_3225_14:   [xilinx-label-all-loops]
+    for(int j = 51; j>=25 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3225_14: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20930:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20934:5: warning: Added loop label VITIS_LOOP_3229_15:   [xilinx-label-all-loops]
+    for(int j = 24 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3229_15: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20934:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20949:3: warning: Added loop label VITIS_LOOP_3244_16:   [xilinx-label-all-loops]
+  for(int j = 63; j >= 36; j--) {
+  ^~~
+  VITIS_LOOP_3244_16: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:20949:3: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21109:4: warning: Added loop label VITIS_LOOP_3404_17:   [xilinx-label-all-loops]
+   for(int j = 63; j >= 31 + I_; j--) {
+   ^~~
+   VITIS_LOOP_3404_17: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21109:4: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21116:5: warning: Added loop label VITIS_LOOP_3411_18:   [xilinx-label-all-loops]
+    for(int j = 63; j >= 31 + I_; j--) {
+    ^~~
+    VITIS_LOOP_3411_18: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21116:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21120:5: warning: Added loop label VITIS_LOOP_3415_19:   [xilinx-label-all-loops]
+    for(int j = 30 + I_; j >= 0; j--) {
+    ^~~
+    VITIS_LOOP_3415_19: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21120:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21835:13: warning: Added loop label VITIS_LOOP_703_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_703_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:21835:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22053:13: warning: Added loop label VITIS_LOOP_921_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_921_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22053:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22470:13: warning: Added loop label VITIS_LOOP_1345_1:   [xilinx-label-all-loops]
+            for (b_exp = I_-1; b_exp >= -F_; b_exp--) {
+            ^~~
+            VITIS_LOOP_1345_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22470:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22790:9: warning: Added loop label VITIS_LOOP_240_1:   [xilinx-label-all-loops]
+        for ( int pos = msbr-1; pos >= 0; pos-- ) {
+        ^~~
+        VITIS_LOOP_240_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22790:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22818:9: warning: Added loop label VITIS_LOOP_268_2:   [xilinx-label-all-loops]
+        for ( int pos = -1; pos >= -F_-1; pos-- ) {
+        ^~~
+        VITIS_LOOP_268_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:22818:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23520:13: warning: Added loop label VITIS_LOOP_48_1:   [xilinx-label-all-loops]
+            for (int j = 0; j < W_-1; j++){
+            ^~~
+            VITIS_LOOP_48_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23520:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23573:5: warning: Added loop label VITIS_LOOP_109_2:   [xilinx-label-all-loops]
+    for (int j = F_l+F_+I_m-1; j < F_l+W_+5; j++){
+    ^~~
+    VITIS_LOOP_109_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23573:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23587:13: warning: Added loop label VITIS_LOOP_123_3:   [xilinx-label-all-loops]
+            for (int j = WO_m-1; j >= W_-1; j--) {
+            ^~~
+            VITIS_LOOP_123_3: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23587:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23617:13: warning: Added loop label VITIS_LOOP_153_4:   [xilinx-label-all-loops]
+            for (int j = W_-2; j >= 0; j--){
+            ^~~
+            VITIS_LOOP_153_4: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23617:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23702:12: warning: Added loop label VITIS_LOOP_281_1:   [xilinx-label-all-loops]
+           for(int i = wf_log+we_log-2; i > WI_e - 2; --i) {
+           ^~~
+           VITIS_LOOP_281_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23702:12: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23722:16: warning: Added loop label VITIS_LOOP_301_2:   [xilinx-label-all-loops]
+               for (int j = WO_e-1; j >= W_-1; j--) {
+               ^~~
+               VITIS_LOOP_301_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23722:16: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23736:20: warning: Added loop label VITIS_LOOP_315_3:   [xilinx-label-all-loops]
+                   for(int i = 0; i < W_-1; ++i) {
+                   ^~~
+                   VITIS_LOOP_315_3: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23736:20: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23829:12: warning: Added loop label VITIS_LOOP_433_1:   [xilinx-label-all-loops]
+           for (int j =WO_d-1; j >= W_-1; j--) {
+           ^~~
+           VITIS_LOOP_433_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23829:12: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23843:15: warning: Added loop label VITIS_LOOP_447_2:   [xilinx-label-all-loops]
+              for(int i = 0; i < W_-1; ++i) {
+              ^~~
+              VITIS_LOOP_447_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23843:15: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23963:13: warning: Added loop label VITIS_LOOP_33_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_33_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:23963:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24087:13: warning: Added loop label VITIS_LOOP_183_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_183_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24087:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24142:13: warning: Added loop label VITIS_LOOP_248_1:   [xilinx-label-all-loops]
+            for (int i = 0; i < W_-1; i++){
+            ^~~
+            VITIS_LOOP_248_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24142:13: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24661:2: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_16_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24661:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24672:2: warning: Added loop label VITIS_LOOP_27_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_27_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24672:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24683:2: warning: Added loop label VITIS_LOOP_38_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_38_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24683:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24694:2: warning: Added loop label VITIS_LOOP_49_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_49_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24694:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24705:2: warning: Added loop label VITIS_LOOP_60_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_60_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24705:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24716:2: warning: Added loop label VITIS_LOOP_71_1:   [xilinx-label-all-loops]
+ for (int i=0; i<W_;i++)
+ ^~~
+ VITIS_LOOP_71_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24716:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24727:2: warning: Added loop label VITIS_LOOP_82_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_82_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24727:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24738:2: warning: Added loop label VITIS_LOOP_93_1:   [xilinx-label-all-loops]
+ for (int i=0; i<I_;i++)
+ ^~~
+ VITIS_LOOP_93_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:24738:2: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27063:12: warning: Added loop label VITIS_LOOP_26_1:   [xilinx-label-all-loops]
+           for(int i = 0; i < W_-1; ++i) {
+           ^~~
+           VITIS_LOOP_26_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27063:12: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27127:7: warning: Added loop label VITIS_LOOP_40_1:   [xilinx-label-all-loops]
+      for(int pos = msbr - 1 ; pos >= -F-1; pos--) {
+      ^~~
+      VITIS_LOOP_40_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27127:7: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27244:9: warning: Added loop label VITIS_LOOP_49_1:   [xilinx-label-all-loops]
+        for(int pos = msbr - 1; pos >= 0; pos--) {
+        ^~~
+        VITIS_LOOP_49_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27244:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27269:5: warning: Added loop label VITIS_LOOP_81_2:   [xilinx-label-all-loops]
+    for(int pos = -1; pos >= -F-1; pos--) {
+    ^~~
+    VITIS_LOOP_81_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27269:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27339:8: warning: Added loop label VITIS_LOOP_169_3:   [xilinx-label-all-loops]
+       for(int i = 0; i < W - 1; ++i) {
+       ^~~
+       VITIS_LOOP_169_3: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:27339:8: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47696:5: warning: Added loop label VITIS_LOOP_127_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_127_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47696:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47712:5: warning: Added loop label VITIS_LOOP_143_1:   [xilinx-label-all-loops]
+    for (size_t i = 0; i < N; ++i) {
+    ^~~
+    VITIS_LOOP_143_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47712:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47728:75: warning: Added loop label VITIS_LOOP_169_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ++() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_169_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47728:75: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47733:75: warning: Added loop label VITIS_LOOP_170_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator --() { pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                          ^~~
+                                                                          VITIS_LOOP_170_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47733:75: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47742:106: warning: Added loop label VITIS_LOOP_198_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator +=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_198_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47742:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47747:106: warning: Added loop label VITIS_LOOP_199_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator -=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_199_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47747:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47752:106: warning: Added loop label VITIS_LOOP_200_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator *=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_200_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47752:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47757:106: warning: Added loop label VITIS_LOOP_201_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator /=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_201_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47757:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47762:106: warning: Added loop label VITIS_LOOP_202_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator %=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_202_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47762:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47767:106: warning: Added loop label VITIS_LOOP_203_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator &=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_203_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47767:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47772:106: warning: Added loop label VITIS_LOOP_204_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator |=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_204_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47772:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47777:106: warning: Added loop label VITIS_LOOP_205_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator ^=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                         ^~~
+                                                                                                         VITIS_LOOP_205_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47777:106: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47782:107: warning: Added loop label VITIS_LOOP_206_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator <<=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_206_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47782:107: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47787:107: warning: Added loop label VITIS_LOOP_207_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) vector &operator >>=(const vector &rhs) { pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                          ^~~
+                                                                                                          VITIS_LOOP_207_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47787:107: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47793:91: warning: Added loop label VITIS_LOOP_222_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_add() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_222_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47793:91: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47798:92: warning: Added loop label VITIS_LOOP_223_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_mult() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                           ^~~
+                                                                                           VITIS_LOOP_223_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47798:92: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47803:91: warning: Added loop label VITIS_LOOP_224_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_and() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_224_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47803:91: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47808:90: warning: Added loop label VITIS_LOOP_225_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_or() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                         ^~~
+                                                                                         VITIS_LOOP_225_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47808:90: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47813:91: warning: Added loop label VITIS_LOOP_226_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) T reduce_xor() const { pragma(); T res = data[0]; for (size_t i = 1; i < N; ++i) {
+                                                                                          ^~~
+                                                                                          VITIS_LOOP_226_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47813:91: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47819:132: warning: Added loop label VITIS_LOOP_256_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_256_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47819:132: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47824:133: warning: Added loop label VITIS_LOOP_257_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator <=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_257_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47824:133: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47829:133: warning: Added loop label VITIS_LOOP_258_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator ==(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_258_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47829:133: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47834:133: warning: Added loop label VITIS_LOOP_259_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator !=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_259_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47834:133: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47839:133: warning: Added loop label VITIS_LOOP_260_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >=(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                    ^~~
+                                                                                                                                    VITIS_LOOP_260_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47839:133: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47844:132: warning: Added loop label VITIS_LOOP_261_1:   [xilinx-label-all-loops]
+  inline __attribute__((always_inline)) friend bool operator >(const vector &lhs, const vector &rhs) { lhs.pragma(); rhs.pragma(); for (size_t i = 0; i < N; ++i) {
+                                                                                                                                   ^~~
+                                                                                                                                   VITIS_LOOP_261_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:47844:132: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56471:5: warning: Added loop label VITIS_LOOP_16_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_vectors; i+=16) {
+    ^~~
+    VITIS_LOOP_16_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56471:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56474:9: warning: Added loop label VITIS_LOOP_19_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 16; ++j) {
+        ^~~
+        VITIS_LOOP_19_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56474:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56483:5: warning: Added loop label VITIS_LOOP_28_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_vectors; i+=16) {
+    ^~~
+    VITIS_LOOP_28_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56483:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56489:9: warning: Added loop label VITIS_LOOP_34_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 16; ++j) {
+        ^~~
+        VITIS_LOOP_34_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56489:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56499:5: warning: Added loop label VITIS_LOOP_44_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < num_vectors; i+=16) {
+    ^~~
+    VITIS_LOOP_44_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56499:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56502:9: warning: Added loop label VITIS_LOOP_47_2:   [xilinx-label-all-loops]
+        for (int j = 0; j < 16; ++j) {
+        ^~~
+        VITIS_LOOP_47_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56502:9: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56542:5: warning: Added loop label VITIS_LOOP_79_1:   [xilinx-label-all-loops]
+    for (int i = 0; i < 16 * num_vectors; ++i) {
+    ^~~
+    VITIS_LOOP_79_1: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56542:5: note: FIX-IT applied suggested code changes
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56551:5: warning: Added loop label VITIS_LOOP_88_2:   [xilinx-label-all-loops]
+    for (int i = 0; i < 16 * num_vectors; ++i) {
+    ^~~
+    VITIS_LOOP_88_2: 
+/home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp:56551:5: note: FIX-IT applied suggested code changes

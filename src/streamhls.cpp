@@ -8,7 +8,8 @@
 #define VECTOR_SIZE 16
 
 struct float16 {
-    float data[VECTOR_SIZE];
+    //float data[VECTOR_SIZE];
+    hls::vector<float, VECTOR_SIZE> data = 0.0;
 };
 
 void fetch_from_hbm(hls::stream<float16> &input_stream, float *hbm_data, int num_vectors) {

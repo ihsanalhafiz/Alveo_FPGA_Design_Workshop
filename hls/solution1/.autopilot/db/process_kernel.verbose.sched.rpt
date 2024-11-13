@@ -1,0 +1,280 @@
+
+
+================================================================
+== Vitis HLS Report for 'process_kernel'
+================================================================
+* Date:           Wed Nov 13 16:40:08 2024
+
+* Version:        2023.2 (Build 4023990 on Oct 11 2023)
+* Project:        hls
+* Solution:       solution1 (Vitis Kernel Flow Target)
+* Product family: virtexuplusHBM
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  5.00 ns|  3.528 ns|     1.35 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       21|       21|  0.105 us|  0.105 us|   21|   21|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_28_1  |       19|       19|         5|          1|          1|    16|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 2
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 2
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
++ Individual pipeline summary: 
+  * Pipeline-0: initiation interval (II) = 1, depth = 5
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 1
+  Pipeline-0 : II = 1, D = 5, States = { 1 2 3 4 5 }
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 1.48>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "%i = alloca i32 1" [./src/streamhls.cpp:28]   --->   Operation 8 'alloca' 'i' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %output_stream, void @empty_12, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7, i32 4294967295, i32 0"   --->   Operation 9 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "%specinterface_ln0 = specinterface void @_ssdm_op_SpecInterface, i512 %input_stream, void @empty_12, i32 0, i32 0, void @empty_7, i32 0, i32 0, void @empty_7, void @empty_7, void @empty_7, i32 0, i32 0, i32 0, i32 0, void @empty_7, void @empty_7, i32 4294967295, i32 0"   --->   Operation 10 'specinterface' 'specinterface_ln0' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.38ns)   --->   "%store_ln28 = store i9 0, i9 %i" [./src/streamhls.cpp:28]   --->   Operation 11 'store' 'store_ln28' <Predicate = true> <Delay = 0.38>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "%br_ln28 = br void %VITIS_LOOP_34_2" [./src/streamhls.cpp:28]   --->   Operation 12 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "%i_2 = load i9 %i" [./src/streamhls.cpp:28]   --->   Operation 13 'load' 'i_2' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "%tmp = bitselect i1 @_ssdm_op_BitSelect.i1.i9.i32, i9 %i_2, i32 8" [./src/streamhls.cpp:28]   --->   Operation 14 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "%br_ln28 = br i1 %tmp, void %VITIS_LOOP_34_2.split, void %for.end9" [./src/streamhls.cpp:28]   --->   Operation 15 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.71ns)   --->   "%i_3 = add i9 %i_2, i9 16" [./src/streamhls.cpp:28]   --->   Operation 16 'add' 'i_3' <Predicate = (!tmp)> <Delay = 0.71> <CoreInst = "Adder">   --->   Core 1 'Adder' <Latency = 0> <II = 1> <Delay = 0.71> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 17 [1/1] (0.38ns)   --->   "%store_ln28 = store i9 %i_3, i9 %i" [./src/streamhls.cpp:28]   --->   Operation 17 'store' 'store_ln28' <Predicate = (!tmp)> <Delay = 0.38>
+
+State 2 <SV = 1> <Delay = 3.52>
+ST_2 : Operation 18 [1/1] (1.20ns)   --->   "%input_stream_read = read i512 @_ssdm_op_Read.ap_fifo.volatile.i512P0A, i512 %input_stream" [./src/streamhls.cpp:31]   --->   Operation 18 'read' 'input_stream_read' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "%trunc_ln31 = trunc i512 %input_stream_read" [./src/streamhls.cpp:31]   --->   Operation 19 'trunc' 'trunc_ln31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "%trunc_ln31_1 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 32, i32 63" [./src/streamhls.cpp:31]   --->   Operation 20 'partselect' 'trunc_ln31_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "%trunc_ln31_2 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 64, i32 95" [./src/streamhls.cpp:31]   --->   Operation 21 'partselect' 'trunc_ln31_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 22 [1/1] (0.00ns)   --->   "%trunc_ln31_3 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 96, i32 127" [./src/streamhls.cpp:31]   --->   Operation 22 'partselect' 'trunc_ln31_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 23 [1/1] (0.00ns)   --->   "%trunc_ln31_4 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 128, i32 159" [./src/streamhls.cpp:31]   --->   Operation 23 'partselect' 'trunc_ln31_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 24 [1/1] (0.00ns)   --->   "%trunc_ln31_5 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 160, i32 191" [./src/streamhls.cpp:31]   --->   Operation 24 'partselect' 'trunc_ln31_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 25 [1/1] (0.00ns)   --->   "%trunc_ln31_6 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 192, i32 223" [./src/streamhls.cpp:31]   --->   Operation 25 'partselect' 'trunc_ln31_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 26 [1/1] (0.00ns)   --->   "%trunc_ln31_7 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 224, i32 255" [./src/streamhls.cpp:31]   --->   Operation 26 'partselect' 'trunc_ln31_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 27 [1/1] (0.00ns)   --->   "%trunc_ln31_8 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 256, i32 287" [./src/streamhls.cpp:31]   --->   Operation 27 'partselect' 'trunc_ln31_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 28 [1/1] (0.00ns)   --->   "%trunc_ln31_9 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 288, i32 319" [./src/streamhls.cpp:31]   --->   Operation 28 'partselect' 'trunc_ln31_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 29 [1/1] (0.00ns)   --->   "%trunc_ln31_s = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 320, i32 351" [./src/streamhls.cpp:31]   --->   Operation 29 'partselect' 'trunc_ln31_s' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 30 [1/1] (0.00ns)   --->   "%trunc_ln31_10 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 352, i32 383" [./src/streamhls.cpp:31]   --->   Operation 30 'partselect' 'trunc_ln31_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln31_11 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 384, i32 415" [./src/streamhls.cpp:31]   --->   Operation 31 'partselect' 'trunc_ln31_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 32 [1/1] (0.00ns)   --->   "%trunc_ln31_12 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 416, i32 447" [./src/streamhls.cpp:31]   --->   Operation 32 'partselect' 'trunc_ln31_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 33 [1/1] (0.00ns)   --->   "%trunc_ln31_13 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 448, i32 479" [./src/streamhls.cpp:31]   --->   Operation 33 'partselect' 'trunc_ln31_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 34 [1/1] (0.00ns)   --->   "%trunc_ln31_14 = partselect i32 @_ssdm_op_PartSelect.i32.i512.i32.i32, i512 %input_stream_read, i32 480, i32 511" [./src/streamhls.cpp:31]   --->   Operation 34 'partselect' 'trunc_ln31_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "%bitcast_ln31 = bitcast i32 %trunc_ln31" [./src/streamhls.cpp:31]   --->   Operation 35 'bitcast' 'bitcast_ln31' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "%bitcast_ln31_1 = bitcast i32 %trunc_ln31_1" [./src/streamhls.cpp:31]   --->   Operation 36 'bitcast' 'bitcast_ln31_1' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 37 [1/1] (0.00ns)   --->   "%bitcast_ln31_2 = bitcast i32 %trunc_ln31_2" [./src/streamhls.cpp:31]   --->   Operation 37 'bitcast' 'bitcast_ln31_2' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 38 [1/1] (0.00ns)   --->   "%bitcast_ln31_3 = bitcast i32 %trunc_ln31_3" [./src/streamhls.cpp:31]   --->   Operation 38 'bitcast' 'bitcast_ln31_3' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 39 [1/1] (0.00ns)   --->   "%bitcast_ln31_4 = bitcast i32 %trunc_ln31_4" [./src/streamhls.cpp:31]   --->   Operation 39 'bitcast' 'bitcast_ln31_4' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 40 [1/1] (0.00ns)   --->   "%bitcast_ln31_5 = bitcast i32 %trunc_ln31_5" [./src/streamhls.cpp:31]   --->   Operation 40 'bitcast' 'bitcast_ln31_5' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 41 [1/1] (0.00ns)   --->   "%bitcast_ln31_6 = bitcast i32 %trunc_ln31_6" [./src/streamhls.cpp:31]   --->   Operation 41 'bitcast' 'bitcast_ln31_6' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 42 [1/1] (0.00ns)   --->   "%bitcast_ln31_7 = bitcast i32 %trunc_ln31_7" [./src/streamhls.cpp:31]   --->   Operation 42 'bitcast' 'bitcast_ln31_7' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 43 [1/1] (0.00ns)   --->   "%bitcast_ln31_8 = bitcast i32 %trunc_ln31_8" [./src/streamhls.cpp:31]   --->   Operation 43 'bitcast' 'bitcast_ln31_8' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 44 [1/1] (0.00ns)   --->   "%bitcast_ln31_9 = bitcast i32 %trunc_ln31_9" [./src/streamhls.cpp:31]   --->   Operation 44 'bitcast' 'bitcast_ln31_9' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 45 [1/1] (0.00ns)   --->   "%bitcast_ln31_10 = bitcast i32 %trunc_ln31_s" [./src/streamhls.cpp:31]   --->   Operation 45 'bitcast' 'bitcast_ln31_10' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 46 [1/1] (0.00ns)   --->   "%bitcast_ln31_11 = bitcast i32 %trunc_ln31_10" [./src/streamhls.cpp:31]   --->   Operation 46 'bitcast' 'bitcast_ln31_11' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 47 [1/1] (0.00ns)   --->   "%bitcast_ln31_12 = bitcast i32 %trunc_ln31_11" [./src/streamhls.cpp:31]   --->   Operation 47 'bitcast' 'bitcast_ln31_12' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 48 [1/1] (0.00ns)   --->   "%bitcast_ln31_13 = bitcast i32 %trunc_ln31_12" [./src/streamhls.cpp:31]   --->   Operation 48 'bitcast' 'bitcast_ln31_13' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 49 [1/1] (0.00ns)   --->   "%bitcast_ln31_14 = bitcast i32 %trunc_ln31_13" [./src/streamhls.cpp:31]   --->   Operation 49 'bitcast' 'bitcast_ln31_14' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 50 [1/1] (0.00ns)   --->   "%bitcast_ln31_15 = bitcast i32 %trunc_ln31_14" [./src/streamhls.cpp:31]   --->   Operation 50 'bitcast' 'bitcast_ln31_15' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 51 [4/4] (2.32ns)   --->   "%mul = fmul i32 %bitcast_ln31, i32 2" [./src/streamhls.cpp:36]   --->   Operation 51 'fmul' 'mul' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 52 [4/4] (2.32ns)   --->   "%mul_1 = fmul i32 %bitcast_ln31_1, i32 2" [./src/streamhls.cpp:36]   --->   Operation 52 'fmul' 'mul_1' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 53 [4/4] (2.32ns)   --->   "%mul_2 = fmul i32 %bitcast_ln31_2, i32 2" [./src/streamhls.cpp:36]   --->   Operation 53 'fmul' 'mul_2' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 54 [4/4] (2.32ns)   --->   "%mul_3 = fmul i32 %bitcast_ln31_3, i32 2" [./src/streamhls.cpp:36]   --->   Operation 54 'fmul' 'mul_3' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 55 [4/4] (2.32ns)   --->   "%mul_4 = fmul i32 %bitcast_ln31_4, i32 2" [./src/streamhls.cpp:36]   --->   Operation 55 'fmul' 'mul_4' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 56 [4/4] (2.32ns)   --->   "%mul_5 = fmul i32 %bitcast_ln31_5, i32 2" [./src/streamhls.cpp:36]   --->   Operation 56 'fmul' 'mul_5' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 57 [4/4] (2.32ns)   --->   "%mul_6 = fmul i32 %bitcast_ln31_6, i32 2" [./src/streamhls.cpp:36]   --->   Operation 57 'fmul' 'mul_6' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 58 [4/4] (2.32ns)   --->   "%mul_7 = fmul i32 %bitcast_ln31_7, i32 2" [./src/streamhls.cpp:36]   --->   Operation 58 'fmul' 'mul_7' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 59 [4/4] (2.32ns)   --->   "%mul_8 = fmul i32 %bitcast_ln31_8, i32 2" [./src/streamhls.cpp:36]   --->   Operation 59 'fmul' 'mul_8' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 60 [4/4] (2.32ns)   --->   "%mul_9 = fmul i32 %bitcast_ln31_9, i32 2" [./src/streamhls.cpp:36]   --->   Operation 60 'fmul' 'mul_9' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 61 [4/4] (2.32ns)   --->   "%mul_s = fmul i32 %bitcast_ln31_10, i32 2" [./src/streamhls.cpp:36]   --->   Operation 61 'fmul' 'mul_s' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 62 [4/4] (2.32ns)   --->   "%mul_10 = fmul i32 %bitcast_ln31_11, i32 2" [./src/streamhls.cpp:36]   --->   Operation 62 'fmul' 'mul_10' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 63 [4/4] (2.32ns)   --->   "%mul_11 = fmul i32 %bitcast_ln31_12, i32 2" [./src/streamhls.cpp:36]   --->   Operation 63 'fmul' 'mul_11' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 64 [4/4] (2.32ns)   --->   "%mul_12 = fmul i32 %bitcast_ln31_13, i32 2" [./src/streamhls.cpp:36]   --->   Operation 64 'fmul' 'mul_12' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 65 [4/4] (2.32ns)   --->   "%mul_13 = fmul i32 %bitcast_ln31_14, i32 2" [./src/streamhls.cpp:36]   --->   Operation 65 'fmul' 'mul_13' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 66 [4/4] (2.32ns)   --->   "%mul_14 = fmul i32 %bitcast_ln31_15, i32 2" [./src/streamhls.cpp:36]   --->   Operation 66 'fmul' 'mul_14' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 3 <SV = 2> <Delay = 2.32>
+ST_3 : Operation 67 [3/4] (2.32ns)   --->   "%mul = fmul i32 %bitcast_ln31, i32 2" [./src/streamhls.cpp:36]   --->   Operation 67 'fmul' 'mul' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 68 [3/4] (2.32ns)   --->   "%mul_1 = fmul i32 %bitcast_ln31_1, i32 2" [./src/streamhls.cpp:36]   --->   Operation 68 'fmul' 'mul_1' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 69 [3/4] (2.32ns)   --->   "%mul_2 = fmul i32 %bitcast_ln31_2, i32 2" [./src/streamhls.cpp:36]   --->   Operation 69 'fmul' 'mul_2' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 70 [3/4] (2.32ns)   --->   "%mul_3 = fmul i32 %bitcast_ln31_3, i32 2" [./src/streamhls.cpp:36]   --->   Operation 70 'fmul' 'mul_3' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 71 [3/4] (2.32ns)   --->   "%mul_4 = fmul i32 %bitcast_ln31_4, i32 2" [./src/streamhls.cpp:36]   --->   Operation 71 'fmul' 'mul_4' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 72 [3/4] (2.32ns)   --->   "%mul_5 = fmul i32 %bitcast_ln31_5, i32 2" [./src/streamhls.cpp:36]   --->   Operation 72 'fmul' 'mul_5' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 73 [3/4] (2.32ns)   --->   "%mul_6 = fmul i32 %bitcast_ln31_6, i32 2" [./src/streamhls.cpp:36]   --->   Operation 73 'fmul' 'mul_6' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 74 [3/4] (2.32ns)   --->   "%mul_7 = fmul i32 %bitcast_ln31_7, i32 2" [./src/streamhls.cpp:36]   --->   Operation 74 'fmul' 'mul_7' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 75 [3/4] (2.32ns)   --->   "%mul_8 = fmul i32 %bitcast_ln31_8, i32 2" [./src/streamhls.cpp:36]   --->   Operation 75 'fmul' 'mul_8' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 76 [3/4] (2.32ns)   --->   "%mul_9 = fmul i32 %bitcast_ln31_9, i32 2" [./src/streamhls.cpp:36]   --->   Operation 76 'fmul' 'mul_9' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 77 [3/4] (2.32ns)   --->   "%mul_s = fmul i32 %bitcast_ln31_10, i32 2" [./src/streamhls.cpp:36]   --->   Operation 77 'fmul' 'mul_s' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 78 [3/4] (2.32ns)   --->   "%mul_10 = fmul i32 %bitcast_ln31_11, i32 2" [./src/streamhls.cpp:36]   --->   Operation 78 'fmul' 'mul_10' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 79 [3/4] (2.32ns)   --->   "%mul_11 = fmul i32 %bitcast_ln31_12, i32 2" [./src/streamhls.cpp:36]   --->   Operation 79 'fmul' 'mul_11' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 80 [3/4] (2.32ns)   --->   "%mul_12 = fmul i32 %bitcast_ln31_13, i32 2" [./src/streamhls.cpp:36]   --->   Operation 80 'fmul' 'mul_12' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 81 [3/4] (2.32ns)   --->   "%mul_13 = fmul i32 %bitcast_ln31_14, i32 2" [./src/streamhls.cpp:36]   --->   Operation 81 'fmul' 'mul_13' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_3 : Operation 82 [3/4] (2.32ns)   --->   "%mul_14 = fmul i32 %bitcast_ln31_15, i32 2" [./src/streamhls.cpp:36]   --->   Operation 82 'fmul' 'mul_14' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.32>
+ST_4 : Operation 83 [2/4] (2.32ns)   --->   "%mul = fmul i32 %bitcast_ln31, i32 2" [./src/streamhls.cpp:36]   --->   Operation 83 'fmul' 'mul' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 84 [2/4] (2.32ns)   --->   "%mul_1 = fmul i32 %bitcast_ln31_1, i32 2" [./src/streamhls.cpp:36]   --->   Operation 84 'fmul' 'mul_1' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 85 [2/4] (2.32ns)   --->   "%mul_2 = fmul i32 %bitcast_ln31_2, i32 2" [./src/streamhls.cpp:36]   --->   Operation 85 'fmul' 'mul_2' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 86 [2/4] (2.32ns)   --->   "%mul_3 = fmul i32 %bitcast_ln31_3, i32 2" [./src/streamhls.cpp:36]   --->   Operation 86 'fmul' 'mul_3' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 87 [2/4] (2.32ns)   --->   "%mul_4 = fmul i32 %bitcast_ln31_4, i32 2" [./src/streamhls.cpp:36]   --->   Operation 87 'fmul' 'mul_4' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 88 [2/4] (2.32ns)   --->   "%mul_5 = fmul i32 %bitcast_ln31_5, i32 2" [./src/streamhls.cpp:36]   --->   Operation 88 'fmul' 'mul_5' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 89 [2/4] (2.32ns)   --->   "%mul_6 = fmul i32 %bitcast_ln31_6, i32 2" [./src/streamhls.cpp:36]   --->   Operation 89 'fmul' 'mul_6' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 90 [2/4] (2.32ns)   --->   "%mul_7 = fmul i32 %bitcast_ln31_7, i32 2" [./src/streamhls.cpp:36]   --->   Operation 90 'fmul' 'mul_7' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 91 [2/4] (2.32ns)   --->   "%mul_8 = fmul i32 %bitcast_ln31_8, i32 2" [./src/streamhls.cpp:36]   --->   Operation 91 'fmul' 'mul_8' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 92 [2/4] (2.32ns)   --->   "%mul_9 = fmul i32 %bitcast_ln31_9, i32 2" [./src/streamhls.cpp:36]   --->   Operation 92 'fmul' 'mul_9' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 93 [2/4] (2.32ns)   --->   "%mul_s = fmul i32 %bitcast_ln31_10, i32 2" [./src/streamhls.cpp:36]   --->   Operation 93 'fmul' 'mul_s' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 94 [2/4] (2.32ns)   --->   "%mul_10 = fmul i32 %bitcast_ln31_11, i32 2" [./src/streamhls.cpp:36]   --->   Operation 94 'fmul' 'mul_10' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 95 [2/4] (2.32ns)   --->   "%mul_11 = fmul i32 %bitcast_ln31_12, i32 2" [./src/streamhls.cpp:36]   --->   Operation 95 'fmul' 'mul_11' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 96 [2/4] (2.32ns)   --->   "%mul_12 = fmul i32 %bitcast_ln31_13, i32 2" [./src/streamhls.cpp:36]   --->   Operation 96 'fmul' 'mul_12' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 97 [2/4] (2.32ns)   --->   "%mul_13 = fmul i32 %bitcast_ln31_14, i32 2" [./src/streamhls.cpp:36]   --->   Operation 97 'fmul' 'mul_13' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 98 [2/4] (2.32ns)   --->   "%mul_14 = fmul i32 %bitcast_ln31_15, i32 2" [./src/streamhls.cpp:36]   --->   Operation 98 'fmul' 'mul_14' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_4 : Operation 137 [1/1] (0.00ns)   --->   "%ret_ln41 = ret" [./src/streamhls.cpp:41]   --->   Operation 137 'ret' 'ret_ln41' <Predicate = (tmp)> <Delay = 0.00>
+
+State 5 <SV = 4> <Delay = 3.52>
+ST_5 : Operation 99 [1/1] (0.00ns)   --->   "%specpipeline_ln29 = specpipeline void @_ssdm_op_SpecPipeline, i32 1, i32 0, i32 0, i32 0, void @empty_7" [./src/streamhls.cpp:29]   --->   Operation 99 'specpipeline' 'specpipeline_ln29' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 100 [1/1] (0.00ns)   --->   "%speclooptripcount_ln28 = speclooptripcount void @_ssdm_op_SpecLoopTripCount, i64 16, i64 16, i64 16" [./src/streamhls.cpp:28]   --->   Operation 100 'speclooptripcount' 'speclooptripcount_ln28' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 101 [1/1] (0.00ns)   --->   "%specloopname_ln28 = specloopname void @_ssdm_op_SpecLoopName, void @empty_13" [./src/streamhls.cpp:28]   --->   Operation 101 'specloopname' 'specloopname_ln28' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 102 [1/4] (2.32ns)   --->   "%mul = fmul i32 %bitcast_ln31, i32 2" [./src/streamhls.cpp:36]   --->   Operation 102 'fmul' 'mul' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 103 [1/4] (2.32ns)   --->   "%mul_1 = fmul i32 %bitcast_ln31_1, i32 2" [./src/streamhls.cpp:36]   --->   Operation 103 'fmul' 'mul_1' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 104 [1/4] (2.32ns)   --->   "%mul_2 = fmul i32 %bitcast_ln31_2, i32 2" [./src/streamhls.cpp:36]   --->   Operation 104 'fmul' 'mul_2' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 105 [1/4] (2.32ns)   --->   "%mul_3 = fmul i32 %bitcast_ln31_3, i32 2" [./src/streamhls.cpp:36]   --->   Operation 105 'fmul' 'mul_3' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 106 [1/4] (2.32ns)   --->   "%mul_4 = fmul i32 %bitcast_ln31_4, i32 2" [./src/streamhls.cpp:36]   --->   Operation 106 'fmul' 'mul_4' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 107 [1/4] (2.32ns)   --->   "%mul_5 = fmul i32 %bitcast_ln31_5, i32 2" [./src/streamhls.cpp:36]   --->   Operation 107 'fmul' 'mul_5' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 108 [1/4] (2.32ns)   --->   "%mul_6 = fmul i32 %bitcast_ln31_6, i32 2" [./src/streamhls.cpp:36]   --->   Operation 108 'fmul' 'mul_6' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 109 [1/4] (2.32ns)   --->   "%mul_7 = fmul i32 %bitcast_ln31_7, i32 2" [./src/streamhls.cpp:36]   --->   Operation 109 'fmul' 'mul_7' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 110 [1/4] (2.32ns)   --->   "%mul_8 = fmul i32 %bitcast_ln31_8, i32 2" [./src/streamhls.cpp:36]   --->   Operation 110 'fmul' 'mul_8' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 111 [1/4] (2.32ns)   --->   "%mul_9 = fmul i32 %bitcast_ln31_9, i32 2" [./src/streamhls.cpp:36]   --->   Operation 111 'fmul' 'mul_9' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 112 [1/4] (2.32ns)   --->   "%mul_s = fmul i32 %bitcast_ln31_10, i32 2" [./src/streamhls.cpp:36]   --->   Operation 112 'fmul' 'mul_s' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 113 [1/4] (2.32ns)   --->   "%mul_10 = fmul i32 %bitcast_ln31_11, i32 2" [./src/streamhls.cpp:36]   --->   Operation 113 'fmul' 'mul_10' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 114 [1/4] (2.32ns)   --->   "%mul_11 = fmul i32 %bitcast_ln31_12, i32 2" [./src/streamhls.cpp:36]   --->   Operation 114 'fmul' 'mul_11' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 115 [1/4] (2.32ns)   --->   "%mul_12 = fmul i32 %bitcast_ln31_13, i32 2" [./src/streamhls.cpp:36]   --->   Operation 115 'fmul' 'mul_12' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 116 [1/4] (2.32ns)   --->   "%mul_13 = fmul i32 %bitcast_ln31_14, i32 2" [./src/streamhls.cpp:36]   --->   Operation 116 'fmul' 'mul_13' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 117 [1/4] (2.32ns)   --->   "%mul_14 = fmul i32 %bitcast_ln31_15, i32 2" [./src/streamhls.cpp:36]   --->   Operation 117 'fmul' 'mul_14' <Predicate = true> <Delay = 2.32> <CoreInst = "FMul_maxdsp">   --->   Core 30 'FMul_maxdsp' <Latency = 3> <II = 1> <Delay = 2.32> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 118 [1/1] (0.00ns)   --->   "%bitcast_ln39 = bitcast i32 %mul" [./src/streamhls.cpp:39]   --->   Operation 118 'bitcast' 'bitcast_ln39' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 119 [1/1] (0.00ns)   --->   "%bitcast_ln39_1 = bitcast i32 %mul_1" [./src/streamhls.cpp:39]   --->   Operation 119 'bitcast' 'bitcast_ln39_1' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 120 [1/1] (0.00ns)   --->   "%bitcast_ln39_2 = bitcast i32 %mul_2" [./src/streamhls.cpp:39]   --->   Operation 120 'bitcast' 'bitcast_ln39_2' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 121 [1/1] (0.00ns)   --->   "%bitcast_ln39_3 = bitcast i32 %mul_3" [./src/streamhls.cpp:39]   --->   Operation 121 'bitcast' 'bitcast_ln39_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 122 [1/1] (0.00ns)   --->   "%bitcast_ln39_4 = bitcast i32 %mul_4" [./src/streamhls.cpp:39]   --->   Operation 122 'bitcast' 'bitcast_ln39_4' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 123 [1/1] (0.00ns)   --->   "%bitcast_ln39_5 = bitcast i32 %mul_5" [./src/streamhls.cpp:39]   --->   Operation 123 'bitcast' 'bitcast_ln39_5' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 124 [1/1] (0.00ns)   --->   "%bitcast_ln39_6 = bitcast i32 %mul_6" [./src/streamhls.cpp:39]   --->   Operation 124 'bitcast' 'bitcast_ln39_6' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 125 [1/1] (0.00ns)   --->   "%bitcast_ln39_7 = bitcast i32 %mul_7" [./src/streamhls.cpp:39]   --->   Operation 125 'bitcast' 'bitcast_ln39_7' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 126 [1/1] (0.00ns)   --->   "%bitcast_ln39_8 = bitcast i32 %mul_8" [./src/streamhls.cpp:39]   --->   Operation 126 'bitcast' 'bitcast_ln39_8' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 127 [1/1] (0.00ns)   --->   "%bitcast_ln39_9 = bitcast i32 %mul_9" [./src/streamhls.cpp:39]   --->   Operation 127 'bitcast' 'bitcast_ln39_9' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 128 [1/1] (0.00ns)   --->   "%bitcast_ln39_10 = bitcast i32 %mul_s" [./src/streamhls.cpp:39]   --->   Operation 128 'bitcast' 'bitcast_ln39_10' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 129 [1/1] (0.00ns)   --->   "%bitcast_ln39_11 = bitcast i32 %mul_10" [./src/streamhls.cpp:39]   --->   Operation 129 'bitcast' 'bitcast_ln39_11' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 130 [1/1] (0.00ns)   --->   "%bitcast_ln39_12 = bitcast i32 %mul_11" [./src/streamhls.cpp:39]   --->   Operation 130 'bitcast' 'bitcast_ln39_12' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 131 [1/1] (0.00ns)   --->   "%bitcast_ln39_13 = bitcast i32 %mul_12" [./src/streamhls.cpp:39]   --->   Operation 131 'bitcast' 'bitcast_ln39_13' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 132 [1/1] (0.00ns)   --->   "%bitcast_ln39_14 = bitcast i32 %mul_13" [./src/streamhls.cpp:39]   --->   Operation 132 'bitcast' 'bitcast_ln39_14' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 133 [1/1] (0.00ns)   --->   "%bitcast_ln39_15 = bitcast i32 %mul_14" [./src/streamhls.cpp:39]   --->   Operation 133 'bitcast' 'bitcast_ln39_15' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 134 [1/1] (0.00ns)   --->   "%or_ln39_s = bitconcatenate i512 @_ssdm_op_BitConcatenate.i512.i32.i32.i32.i32.i32.i32.i32.i32.i32.i32.i32.i32.i32.i32.i32.i32, i32 %bitcast_ln39_15, i32 %bitcast_ln39_14, i32 %bitcast_ln39_13, i32 %bitcast_ln39_12, i32 %bitcast_ln39_11, i32 %bitcast_ln39_10, i32 %bitcast_ln39_9, i32 %bitcast_ln39_8, i32 %bitcast_ln39_7, i32 %bitcast_ln39_6, i32 %bitcast_ln39_5, i32 %bitcast_ln39_4, i32 %bitcast_ln39_3, i32 %bitcast_ln39_2, i32 %bitcast_ln39_1, i32 %bitcast_ln39" [./src/streamhls.cpp:39]   --->   Operation 134 'bitconcatenate' 'or_ln39_s' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 135 [1/1] (1.20ns)   --->   "%write_ln39 = write void @_ssdm_op_Write.ap_fifo.volatile.i512P0A, i512 %output_stream, i512 %or_ln39_s" [./src/streamhls.cpp:39]   --->   Operation 135 'write' 'write_ln39' <Predicate = true> <Delay = 1.20> <CoreInst = "FIFO">   --->   Core 78 'FIFO' <Latency = 0> <II = 1> <Delay = 1.20> <Storage> <Opcode : 'read' 'write' 'nbread' 'nbwrite'> <Ports = 0> <Width = 512> <Depth = 4> <FIFO>
+ST_5 : Operation 136 [1/1] (0.00ns)   --->   "%br_ln28 = br void %VITIS_LOOP_34_2" [./src/streamhls.cpp:28]   --->   Operation 136 'br' 'br_ln28' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 5.000ns, clock uncertainty: 1.350ns.
+
+ <State 1>: 1.489ns
+The critical path consists of the following:
+	'store' operation 0 bit ('store_ln28', ./src/streamhls.cpp:28) of constant 0 on local variable 'i', ./src/streamhls.cpp:28 [6]  (0.387 ns)
+	'load' operation 9 bit ('i', ./src/streamhls.cpp:28) on local variable 'i', ./src/streamhls.cpp:28 [9]  (0.000 ns)
+	'add' operation 9 bit ('i', ./src/streamhls.cpp:28) [83]  (0.715 ns)
+	'store' operation 0 bit ('store_ln28', ./src/streamhls.cpp:28) of variable 'i', ./src/streamhls.cpp:28 on local variable 'i', ./src/streamhls.cpp:28 [84]  (0.387 ns)
+
+ <State 2>: 3.528ns
+The critical path consists of the following:
+	fifo read operation ('input_stream_read', ./src/streamhls.cpp:31) on port 'input_stream' (./src/streamhls.cpp:31) [16]  (1.206 ns)
+	'fmul' operation 32 bit ('mul', ./src/streamhls.cpp:36) [49]  (2.322 ns)
+
+ <State 3>: 2.322ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', ./src/streamhls.cpp:36) [49]  (2.322 ns)
+
+ <State 4>: 2.322ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', ./src/streamhls.cpp:36) [49]  (2.322 ns)
+
+ <State 5>: 3.528ns
+The critical path consists of the following:
+	'fmul' operation 32 bit ('mul', ./src/streamhls.cpp:36) [49]  (2.322 ns)
+	fifo write operation ('write_ln39', ./src/streamhls.cpp:39) on port 'output_stream' (./src/streamhls.cpp:39) [82]  (1.206 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

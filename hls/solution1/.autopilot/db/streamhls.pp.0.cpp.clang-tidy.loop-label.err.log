@@ -1,0 +1,5 @@
+26 errors generated.
+Error while processing /home/miahafiz/Alveo_FPGA_Design_Workshop/hls/solution1/.autopilot/db/streamhls.pp.0.cpp.
+clang-tidy applied 163 of 163 suggested fixes.
+Suppressed 87 warnings (87 in non-user code).
+Use -header-filter=.* to display errors from all non-system headers. Use -system-headers to display errors from system headers as well.

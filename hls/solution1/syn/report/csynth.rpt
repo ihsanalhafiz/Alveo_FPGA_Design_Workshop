@@ -1,0 +1,196 @@
+
+
+================================================================
+== Synthesis Summary Report of 'streamhls'
+================================================================
++ General Information: 
+    * Date:           Wed Nov 13 16:40:11 2024
+    * Version:        2023.2 (Build 4023990 on Oct 11 2023)
+    * Project:        hls
+    * Solution:       solution1 (Vitis Kernel Flow Target)
+    * Product family: virtexuplusHBM
+    * Target device:  xcu55c-fsvh2892-2L-e
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +----------------------------------------------+------+------+---------+---------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+    |                    Modules                   | Issue|      | Latency | Latency | Iteration|         | Trip |          |          |          |             |            |     |
+    |                    & Loops                   | Type | Slack| (cycles)|   (ns)  |  Latency | Interval| Count| Pipelined|   BRAM   |    DSP   |      FF     |     LUT    | URAM|
+    +----------------------------------------------+------+------+---------+---------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+    |+ streamhls*                                  |     -|  0.00|      165|  825.000|         -|       91|     -|  dataflow|  30 (~0%)|  48 (~0%)|  10567 (~0%)|  6800 (~0%)|    -|
+    | + entry_proc                                 |     -|  2.24|        0|    0.000|         -|        0|     -|        no|         -|         -|      3 (~0%)|    29 (~0%)|    -|
+    | + fetch_from_hbm                             |     -|  0.00|       90|  450.000|         -|       90|     -|        no|         -|         -|    799 (~0%)|   136 (~0%)|    -|
+    |  o VITIS_LOOP_16_1                           |     -|  3.65|       88|  440.000|        74|        1|    16|       yes|         -|         -|            -|           -|    -|
+    | + process_kernel                             |     -|  0.12|       21|  105.000|         -|       21|     -|        no|         -|  48 (~0%)|   2306 (~0%)|  1324 (~0%)|    -|
+    |  o VITIS_LOOP_28_1                           |     -|  3.65|       19|   95.000|         5|        1|    16|       yes|         -|         -|            -|           -|    -|
+    | + write_to_output                            |     -|  0.00|       90|  450.000|         -|       90|     -|        no|         -|         -|    658 (~0%)|   600 (~0%)|    -|
+    |  + write_to_output_Pipeline_VITIS_LOOP_44_1  |     -|  0.00|       19|   95.000|         -|       19|     -|        no|         -|         -|    526 (~0%)|    76 (~0%)|    -|
+    |   o VITIS_LOOP_44_1                          |     -|  3.65|       17|   85.000|         3|        1|    16|       yes|         -|         -|            -|           -|    -|
+    +----------------------------------------------+------+------+---------+---------+----------+---------+------+----------+----------+----------+-------------+------------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* M_AXI
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| Interface  | Data Width | Address Width | Latency | Offset | Register | Max Widen | Max Read     | Max Write    | Num Read    | Num Write   | Resource Estimate |
+|            | (SW->HW)   |               |         |        |          | Bitwidth  | Burst Length | Burst Length | Outstanding | Outstanding |                   |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+| m_axi_gmem | 32 -> 512  | 64            | 64      | slave  | 0        | 512       | 16           | 16           | 16          | 16          | BRAM=30           |
++------------+------------+---------------+---------+--------+----------+-----------+--------------+--------------+-------------+-------------+-------------------+
+
+* S_AXILITE Interfaces
++---------------+------------+---------------+--------+----------+
+| Interface     | Data Width | Address Width | Offset | Register |
++---------------+------------+---------------+--------+----------+
+| s_axi_control | 32         | 6             | 16     | 0        |
++---------------+------------+---------------+--------+----------+
+
+* S_AXILITE Registers
++---------------+---------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| Interface     | Register      | Offset | Width | Access | Description                      | Bit Fields                                                                         |
++---------------+---------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+| s_axi_control | CTRL          | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 4=AP_CONTINUE 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER          | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                                           |
+| s_axi_control | IP_IER        | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                                      |
+| s_axi_control | IP_ISR        | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                                      |
+| s_axi_control | hbm_data_1    | 0x10   | 32    | W      | Data signal of hbm_data          |                                                                                    |
+| s_axi_control | hbm_data_2    | 0x14   | 32    | W      | Data signal of hbm_data          |                                                                                    |
+| s_axi_control | output_data_1 | 0x1c   | 32    | W      | Data signal of output_data       |                                                                                    |
+| s_axi_control | output_data_2 | 0x20   | 32    | W      | Data signal of output_data       |                                                                                    |
++---------------+---------------+--------+-------+--------+----------------------------------+------------------------------------------------------------------------------------+
+
+* TOP LEVEL CONTROL
++-----------+---------------+-----------+
+| Interface | Type          | Ports     |
++-----------+---------------+-----------+
+| ap_clk    | clock         | ap_clk    |
+| ap_rst_n  | reset         | ap_rst_n  |
+| interrupt | interrupt     | interrupt |
+| ap_ctrl   | ap_ctrl_chain |           |
++-----------+---------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+----------+
+| Argument    | Direction | Datatype |
++-------------+-----------+----------+
+| hbm_data    | inout     | float*   |
+| output_data | inout     | float*   |
++-------------+-----------+----------+
+
+* SW-to-HW Mapping
++-------------+---------------+-----------+----------+-----------------------------------------+
+| Argument    | HW Interface  | HW Type   | HW Usage | HW Info                                 |
++-------------+---------------+-----------+----------+-----------------------------------------+
+| hbm_data    | m_axi_gmem    | interface |          |                                         |
+| hbm_data    | s_axi_control | register  | offset   | name=hbm_data_1 offset=0x10 range=32    |
+| hbm_data    | s_axi_control | register  | offset   | name=hbm_data_2 offset=0x14 range=32    |
+| output_data | m_axi_gmem    | interface |          |                                         |
+| output_data | s_axi_control | register  | offset   | name=output_data_1 offset=0x1c range=32 |
+| output_data | s_axi_control | register  | offset   | name=output_data_2 offset=0x20 range=32 |
++-------------+---------------+-----------+----------+-----------------------------------------+
+
+
+================================================================
+== M_AXI Burst Information
+================================================================
+ Note: All burst requests might be further partitioned into multiple requests during RTL generation based on max_read_burst_length or max_write_burst_length settings.
+
+* Inferred Burst Summary
++--------------+-----------+--------+-------+-----------------+-------------------------+
+| HW Interface | Direction | Length | Width | Loop            | Loop Location           |
++--------------+-----------+--------+-------+-----------------+-------------------------+
+| m_axi_gmem   | read      | 16     | 512   | VITIS_LOOP_16_1 | src/streamhls.cpp:16:22 |
+| m_axi_gmem   | write     | 16     | 512   | VITIS_LOOP_44_1 | src/streamhls.cpp:44:22 |
++--------------+-----------+--------+-------+-----------------+-------------------------+
+
+* All M_AXI Variable Accesses
++--------------+-------------+-------------------------+-----------+--------------+--------+-----------------+-------------------------+------------+----------------------------------------------------------------------------------------------------------+
+| HW Interface | Variable    | Access Location         | Direction | Burst Status | Length | Loop            | Loop Location           | Resolution | Problem                                                                                                  |
++--------------+-------------+-------------------------+-----------+--------------+--------+-----------------+-------------------------+------------+----------------------------------------------------------------------------------------------------------+
+| m_axi_gmem   | output_data | src/streamhls.cpp:16:22 | write     | Widen Fail   |        | VITIS_LOOP_44_1 | src/streamhls.cpp:44:22 | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
+| m_axi_gmem   | hbm_data    | src/streamhls.cpp:16:22 | read      | Widen Fail   |        | VITIS_LOOP_16_1 | src/streamhls.cpp:16:22 | 214-353    | Could not widen since type i512 size is greater than or equal to the max_widen_bitwidth threshold of 512 |
+| m_axi_gmem   | hbm_data    | src/streamhls.cpp:21:17 | read      | Widened      | 16     | VITIS_LOOP_16_1 | src/streamhls.cpp:16:22 |            |                                                                                                          |
+| m_axi_gmem   | hbm_data    | src/streamhls.cpp:21:17 | read      | Inferred     | 256    | VITIS_LOOP_16_1 | src/streamhls.cpp:16:22 |            |                                                                                                          |
+| m_axi_gmem   | output_data | src/streamhls.cpp:49:21 | write     | Widened      | 16     | VITIS_LOOP_44_1 | src/streamhls.cpp:44:22 |            |                                                                                                          |
+| m_axi_gmem   | output_data | src/streamhls.cpp:49:21 | write     | Inferred     | 256    | VITIS_LOOP_44_1 | src/streamhls.cpp:44:22 |            |                                                                                                          |
++--------------+-------------+-------------------------+-----------+--------------+--------+-----------------+-------------------------+------------+----------------------------------------------------------------------------------------------------------+
+
+    * Resolution URL: docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=XXX-YYY.html (replace XXX-YYY with column value)
+
+================================================================
+== Bind Op Report
+================================================================
++----------------------------------------------+-----+--------+----------+------+--------+---------+
+| Name                                         | DSP | Pragma | Variable | Op   | Impl   | Latency |
++----------------------------------------------+-----+--------+----------+------+--------+---------+
+| + streamhls                                  | 48  |        |          |      |        |         |
+|  + fetch_from_hbm                            | 0   |        |          |      |        |         |
+|    add_ln16_fu_121_p2                        |     |        | add_ln16 | add  | fabric | 0       |
+|  + process_kernel                            | 48  |        |          |      |        |         |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U6          | 3   |        | mul      | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U7          | 3   |        | mul_1    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U8          | 3   |        | mul_2    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U9          | 3   |        | mul_3    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U10         | 3   |        | mul_4    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U11         | 3   |        | mul_5    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U12         | 3   |        | mul_6    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U13         | 3   |        | mul_7    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U14         | 3   |        | mul_8    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U15         | 3   |        | mul_9    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U16         | 3   |        | mul_s    | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U17         | 3   |        | mul_10   | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U18         | 3   |        | mul_11   | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U19         | 3   |        | mul_12   | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U20         | 3   |        | mul_13   | fmul | maxdsp | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U21         | 3   |        | mul_14   | fmul | maxdsp | 3       |
+|    i_3_fu_217_p2                             |     |        | i_3      | add  | fabric | 0       |
+|  + write_to_output                           | 0   |        |          |      |        |         |
+|   + write_to_output_Pipeline_VITIS_LOOP_44_1 | 0   |        |          |      |        |         |
+|     add_ln44_fu_98_p2                        |     |        | add_ln44 | add  | fabric | 0       |
++----------------------------------------------+-----+--------+----------+------+--------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------+--------------+-------------+------+------+--------+---------------+--------+---------+------------------+
+| Name              | Usage        | Type        | BRAM | URAM | Pragma | Variable      | Impl   | Latency | Bitwidth, Depth, |
+|                   |              |             |      |      |        |               |        |         | Banks            |
++-------------------+--------------+-------------+------+------+--------+---------------+--------+---------+------------------+
+| + streamhls       |              |             | 30   | 0    |        |               |        |         |                  |
+|   control_s_axi_U | interface    | s_axilite   |      |      |        |               |        |         |                  |
+|   gmem_m_axi_U    | interface    | m_axi       | 30   |      |        |               |        |         |                  |
+|   output_data_c_U | fifo channel | scalar prop |      |      |        | output_data_c | srl    | 0       | 64, 4, 1         |
+|   input_stream_U  | fifo channel | stream      |      |      |        | input_stream  | memory | 0       | 512, 4, 1        |
+|   output_stream_U | fifo channel | stream      |      |      |        | output_stream | memory | 0       | 512, 4, 1        |
++-------------------+--------------+-------------+------+------+--------+---------------+--------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+-------------------------------------------------+----------------------------------------------------+
+| Type      | Options                                         | Location                                           |
++-----------+-------------------------------------------------+----------------------------------------------------+
+| pipeline  | II=1                                            | ./src/streamhls.cpp:17 in fetch_from_hbm           |
+| unroll    | factor=16                                       | ./src/streamhls.cpp:20 in fetch_from_hbm           |
+| pipeline  | II=1                                            | ./src/streamhls.cpp:29 in process_kernel           |
+| pipeline  | II=1                                            | ./src/streamhls.cpp:45 in write_to_output          |
+| unroll    | factor=16                                       | ./src/streamhls.cpp:48 in write_to_output          |
+| interface | m_axi port=hbm_data offset=slave bundle=gmem    | ./src/streamhls.cpp:55 in streamhls, hbm_data      |
+| interface | m_axi port=output_data offset=slave bundle=gmem | ./src/streamhls.cpp:56 in streamhls, output_data   |
+| stream    | variable=input_stream depth=4                   | ./src/streamhls.cpp:61 in streamhls, input_stream  |
+| stream    | variable=output_stream depth=4                  | ./src/streamhls.cpp:62 in streamhls, output_stream |
+| dataflow  |                                                 | ./src/streamhls.cpp:66 in streamhls                |
++-----------+-------------------------------------------------+----------------------------------------------------+
+
+

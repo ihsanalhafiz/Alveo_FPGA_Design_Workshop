@@ -1,0 +1,44 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "streamhls",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "streamhls"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/miahafiz/Alveo_FPGA_Design_Workshop/directives.tcl",
+    "sourceLine": 7,
+    "success": true
+  },
+  {
+    "functionLabel": "",
+    "functionName": "streamhls",
+    "id": 1,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "streamhls"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/miahafiz/Alveo_FPGA_Design_Workshop/hls.tcl",
+    "sourceLine": 18,
+    "success": true
+  }
+]

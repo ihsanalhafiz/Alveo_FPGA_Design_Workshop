@@ -1,0 +1,83 @@
+{
+    "1": {
+        "name": "entry_proc",
+        "file": "streamhls.cpp",
+        "fileloc": "0",
+        "instructions": "4",
+        "total_instructions": "4",
+        "calls": "",
+        "basicblocks": "1"
+    },
+    "2": {
+        "name": "write_to_output_Pipeline_VITIS_LOOP_44_1",
+        "file": ".\/src\/streamhls.cpp",
+        "fileloc": "44",
+        "instructions": "20",
+        "total_instructions": "20",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "0": {
+        "name": "streamhls",
+        "file": "streamhls.cpp",
+        "fileloc": "54",
+        "instructions": "26",
+        "total_instructions": "169",
+        "calls": "1 5 4 3",
+        "basicblocks": "1"
+    },
+    "3": {
+        "name": "write_to_output",
+        "file": ".\/src\/streamhls.cpp",
+        "fileloc": "44",
+        "instructions": "12",
+        "total_instructions": "32",
+        "calls": "2",
+        "basicblocks": "1"
+    },
+    "4": {
+        "name": "process_kernel",
+        "file": "streamhls.cpp",
+        "fileloc": "27",
+        "instructions": "82",
+        "total_instructions": "82",
+        "calls": "",
+        "basicblocks": "4",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    },
+    "5": {
+        "name": "fetch_from_hbm",
+        "file": "streamhls.cpp",
+        "fileloc": "15",
+        "instructions": "25",
+        "total_instructions": "25",
+        "calls": "",
+        "basicblocks": "6",
+        "loads": {
+            "L": "1"
+        },
+        "stores": {
+            "L": "2"
+        },
+        "loops": {
+            "L": "1"
+        }
+    }
+}

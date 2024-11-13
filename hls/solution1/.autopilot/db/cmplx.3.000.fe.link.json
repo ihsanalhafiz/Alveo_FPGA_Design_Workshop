@@ -1,0 +1,101 @@
+{
+  "0": {
+    "basicblocks": 1,
+    "calls": "1 4 5",
+    "file": "streamhls.cpp",
+    "fileloc": 54,
+    "instructions": 32,
+    "name": "streamhls",
+    "total_instructions": 336
+  },
+  "1": {
+    "basicblocks": 13,
+    "calls": "6",
+    "file": "streamhls.cpp",
+    "fileloc": 15,
+    "instructions": 34,
+    "loads": {
+      "L": 1
+    },
+    "name": "fetch_from_hbm",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 81
+  },
+  "2": {
+    "basicblocks": 1,
+    "calls": "3",
+    "file": "array",
+    "fileloc": 185,
+    "instructions": 3,
+    "name": "operator[]",
+    "total_instructions": 5
+  },
+  "3": {
+    "basicblocks": 1,
+    "calls": "",
+    "file": "array",
+    "fileloc": 55,
+    "instructions": 2,
+    "name": "_S_ref",
+    "total_instructions": 2
+  },
+  "4": {
+    "basicblocks": 13,
+    "calls": "6",
+    "file": "streamhls.cpp",
+    "fileloc": 27,
+    "instructions": 41,
+    "loads": {
+      "L": 1
+    },
+    "name": "process_kernel",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 138
+  },
+  "5": {
+    "basicblocks": 13,
+    "calls": "",
+    "file": "streamhls.cpp",
+    "fileloc": 43,
+    "instructions": 33,
+    "loads": {
+      "L": 1
+    },
+    "name": "write_to_output",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 83
+  },
+  "6": {
+    "basicblocks": 1,
+    "calls": "7",
+    "file": "streamhls.cpp",
+    "fileloc": 10,
+    "instructions": 9,
+    "name": "float16",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 32
+  },
+  "7": {
+    "basicblocks": 7,
+    "calls": "2",
+    "file": "hls_vector.h",
+    "fileloc": 125,
+    "instructions": 16,
+    "loads": {
+      "L": 1
+    },
+    "name": "vector",
+    "stores": {
+      "L": 1
+    },
+    "total_instructions": 23
+  }
+}

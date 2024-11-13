@@ -1,0 +1,21 @@
+<pragmas>
+<pragma file="./src/streamhls.cpp" line="45" pragmaType="pipeline" parentfunction="write_to_output" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./src/streamhls.cpp" line="48" pragmaType="unroll" parentfunction="write_to_output" factor="16" skip_exit_check="0"/>
+<pragma file="./src/streamhls.cpp" line="66" pragmaType="dataflow" parentfunction="streamhls" disable_start_propagation="0"/>
+<pragma file="./src/streamhls.cpp" line="55" pragmaType="interface" parentfunction="streamhls" mode="m_axi" port="hbm_data" bundle="gmem" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="./src/streamhls.cpp" line="56" pragmaType="interface" parentfunction="streamhls" mode="m_axi" port="output_data" bundle="gmem" offset="slave" name="" depth="-1" num_read_outstanding="-1" num_write_outstanding="-1" max_burst_read_length="-1" max_burst_write_length="-1" latency="-1" max_widen_bitwidth="-1" channel=""/>
+<pragma file="./src/streamhls.cpp" line="61" pragmaType="stream" parentfunction="streamhls" depth="4" type="fifo" variable="input_stream"/>
+<pragma file="./src/streamhls.cpp" line="62" pragmaType="stream" parentfunction="streamhls" depth="4" type="fifo" variable="output_stream"/>
+<pragma file="./src/streamhls.cpp" line="29" pragmaType="pipeline" parentfunction="process_kernel" off="0" ii="1" rewind="0" style=""/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="read" off="0" region="0" recursive="0"/>
+<pragma file="/opt/xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h" line="125" pragmaType="inline" parentfunction="hls::vector<float, 16ul>::vector(float const&)" off="0" region="0" recursive="0"/>
+<pragma file="/opt/xilinx/Vitis_HLS/2023.2/common/technology/autopilot/hls_vector.h" line="128" pragmaType="unroll" parentfunction="hls::vector<float, 16ul>::vector(float const&)" factor="-1" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="pragma" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="aggregate" parentfunction="pragma" compact="3" variable="this"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::vector<float, 16ul>::operator[](unsigned long)" off="0" region="0" recursive="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="write" off="0" region="0" recursive="0"/>
+<pragma file="./src/streamhls.cpp" line="17" pragmaType="pipeline" parentfunction="fetch_from_hbm" off="0" ii="1" rewind="0" style=""/>
+<pragma file="./src/streamhls.cpp" line="20" pragmaType="unroll" parentfunction="fetch_from_hbm" factor="16" skip_exit_check="0"/>
+<pragma file="" line="0" pragmaType="inline" parentfunction="hls::stream<float16, 0>::stream()" off="0" region="0" recursive="0"/>
+</pragmas>
