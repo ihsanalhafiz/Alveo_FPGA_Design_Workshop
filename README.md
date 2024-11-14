@@ -35,7 +35,10 @@ Below is the step by step
 
 # 1. Run HLS and do Analysis
 
-# 2. 
+# 2. Compile for FPGA and produce xclbin file
+
+# 3. Compile host code
+
 # License
 This repository is licensed under the MIT License.
 
