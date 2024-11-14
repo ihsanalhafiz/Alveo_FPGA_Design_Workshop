@@ -96,7 +96,7 @@ $(TEMP_DIR)/streamhls.xo: ./src/streamhls.cpp
 
 $(BUILD_DIR)/streamhls.xclbin: $(TEMP_DIR)/streamhls.xo
 	mkdir -p $(BUILD_DIR)
-	v++ -l $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) $(VPP_LDFLAGS) --temp_dir $(TEMP_DIR) $(VPP_LDFLAGS_krnl_vadd) -o'$(LINK_OUTPUT)' $(+) --vivado.impl.jobs 32 --vivado.synth.jobs 32
+	v++ -l $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) $(VPP_LDFLAGS) --temp_dir $(TEMP_DIR) $(VPP_LDFLAGS_krnl_vadd) -o'$(LINK_OUTPUT)' $(+) --vivado.impl.jobs 8 --vivado.synth.jobs 8
 	v++ -p $(LINK_OUTPUT) $(VPP_FLAGS) -t $(TARGET) --platform $(PLATFORM) --package.out_dir $(PACKAGE_OUT) -o $(BUILD_DIR)/streamhls.xclbin 
 
 ############################## Setting Rules for Host (Building Host Executable) ##############################

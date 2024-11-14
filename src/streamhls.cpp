@@ -1,6 +1,4 @@
 #include <hls_stream.h>
-#include <hls_math.h>
-#include <hls_vector.h>
 #include <ap_int.h>
 #include <iostream>
 #include <cmath>
@@ -8,8 +6,7 @@
 #define VECTOR_SIZE 16
 
 struct float16 {
-    //float data[VECTOR_SIZE];
-    hls::vector<float, VECTOR_SIZE> data = 0.0;
+    float data[VECTOR_SIZE];
 };
 
 void fetch_from_hbm(hls::stream<float16> &input_stream, float *hbm_data, int num_vectors) {
@@ -58,8 +55,8 @@ void streamhls(float *hbm_data, float *output_data) {
     hls::stream<float16> input_stream;
     hls::stream<float16> output_stream;
 
-    #pragma HLS STREAM variable=input_stream depth=4
-    #pragma HLS STREAM variable=output_stream depth=4
+    #pragma HLS STREAM variable=input_stream depth=16
+    #pragma HLS STREAM variable=output_stream depth=16
 
     int num_vectors = 256;
 
@@ -71,12 +68,11 @@ void streamhls(float *hbm_data, float *output_data) {
 
 // Testbench code
 int main() {
-    const int num_vectors = 256;  // Number of 16-float vectors
-    float hbm_data[VECTOR_SIZE * num_vectors];
-    float output_data[VECTOR_SIZE * num_vectors];
+    float hbm_data[256];
+    float output_data[256];
 
     // Initialize input data
-    for (int i = 0; i < VECTOR_SIZE * num_vectors; ++i) {
+    for (int i = 0; i < 256; ++i) {
         hbm_data[i] = static_cast<float>(i);
     }
 
@@ -85,7 +81,7 @@ int main() {
 
     // Verify the output data
     bool pass = true;
-    for (int i = 0; i < VECTOR_SIZE * num_vectors; ++i) {
+    for (int i = 0; i < 256; ++i) {
         float expected = hbm_data[i] * 2;  // As per the processing kernel logic
         if (std::fabs(output_data[i] - expected) > 1e-6) {
             std::cout << "Mismatch at index " << i << ": expected " << expected << ", got " << output_data[i] << std::endl;
