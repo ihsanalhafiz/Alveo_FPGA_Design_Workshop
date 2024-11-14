@@ -29,6 +29,13 @@ The sample application provided here demonstrates a data streaming process using
    source /opt/xilinx/Vitis/<version>/settings64.sh
    source /opt/xilinx/xrt/setup.sh
 
+# What should we do?
+
+Below is the step by step
+
+# 1. Run HLS and do Analysis
+
+# 2. 
 # License
 This repository is licensed under the MIT License.
 
